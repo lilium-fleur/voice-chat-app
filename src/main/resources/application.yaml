@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: voice-chat-app
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
